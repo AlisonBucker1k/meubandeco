@@ -32,7 +32,7 @@
 
                 <div class="form-group" id="seguimento">
                     <select name="seguimento" class="form-control">
-                        <option value="">Qual é o seguimento do seu negócio?</option>
+                        <option value="">Qual é o segmento do seu negócio?</option>
                         <option value="Barzinho">Barzinho</option>
                         <option value="Lanchonete">Lanchonete</option>
                         <option value="Restaurante">Restaurante</option>
