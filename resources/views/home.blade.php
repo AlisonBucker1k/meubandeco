@@ -39,7 +39,6 @@
                         <option value="Sorveteria/Açaiteria">Sorveteria/Açaiteria</option>
                     </select>
                 </div>
-
                 <div class="form-group" id="email_cliente">
                     <input type="text" name="email" placeholder="Qual o seu email?" class="form-control">
                 </div>

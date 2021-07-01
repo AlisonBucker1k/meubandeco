@@ -1,0 +1,14 @@
+/*
+Sistema: Meu Bandeco app
+*/
+
+@use "sass:map";
+@import "base"; 
+
+html{
+
+}
+body{
+    color: white;
+    background-color: map.get( $mbdc-colors, "primary");
+}  

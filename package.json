@@ -12,9 +12,13 @@
   "devDependencies": {
     "axios": "^0.21",
     "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "laravel-mix": "^6.0.6",
     "lodash": "^4.17.19",
-    "postcss": "^8.1.14"
+    "node-sass": "^6.0.1",
+    "postcss": "^8.1.14",
+    "react": "^17.0.2",
+    "sass": "^1.35.1"
   },
   "name": "meubandeco",
   "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\"></a></p>",
