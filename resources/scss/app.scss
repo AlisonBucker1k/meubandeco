@@ -3,12 +3,64 @@ Sistema: Meu Bandeco app
 */
 
 @use "sass:map";
-@import "base"; 
+@import "base";
 
-html{
-
+:root {
+    --mbdc-cor-primaria : #ED1C24;
+    --mbdc-cor-leve     : #E0E0E0;
+    --mbdc-border-radius: 10px;    
 }
-body{
-    color: white;
-    background-color: map.get( $mbdc-colors, "primary");
-}  
+
+html {
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    color           : white;
+    background-color: var(--mbdc-cor-primaria);
+}
+
+.secao-precadastro {
+    max-width: 480px;
+    padding  : 0 30px;
+}
+
+.btn {
+    @extend %form-field--base;
+
+    &.btn-default {}
+
+    &.btn-lg {}
+
+    &.btn-cta {
+        /*Botao para chamada de vendas/destaque*/
+        color      : var(--mbdc-cor-primaria);
+        font-weight: bold;
+        padding    : 1rem 2rem;
+    }
+
+    &.btn-negative {}
+}
+
+/*Formulários*/
+.form-group {
+    /*Base*/
+    display      : block;
+    margin-bottom: 1rem;
+}
+
+%form-field--base {
+    border-radius: var(--mbdc-border-radius);
+    font-weight  : bold;
+
+    &::placeholder {
+        color: var(--mbdc-cor-leve);
+    }
+}
+
+input,
+select {
+    &.form-control {
+        @extend %form-field--base;
+    }
+}

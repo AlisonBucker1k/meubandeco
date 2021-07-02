@@ -4,7 +4,7 @@ const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 
 const base_scss_dir = "resources/scss";
-const base_output_style_dir = "resources/css";
+const base_output_style_dir = "public/assets/css";
 
 
 function generate_style(cb) {
@@ -20,4 +20,4 @@ function default_fnc(cb) {
   watch_scss();
 };
 exports.gerar_estilo = generate_style;
-exports.default = default_fnc;
+exports.default = default_fnc; 

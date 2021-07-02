@@ -1,1 +1,1 @@
-body{color:#fff;background-color:#ed1c24}
+:root{--mbdc-cor-primaria: #ED1C24}body{color:#fff;background-color:var(--mbdc-cor-primaria)}.secao-precadastro{max-width:320px}

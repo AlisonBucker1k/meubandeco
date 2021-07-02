@@ -1,14 +1,1 @@
-body{
-    background-color: red;
-    width: 100%; 
-    height: 100%;
-    
-}
-
-.conteúdo{
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 400px;
-    padding: 50px;
-}
+.page-title{font-weight:bold}.negative-color{color:#fff}:root{--mbdc-cor-primaria: #ED1C24;--mbdc-cor-leve: #E0E0E0;--mbdc-border-radius: 10px}html{font-family:Montserrat,sans-serif}body{color:#fff;background-color:var(--mbdc-cor-primaria)}.secao-precadastro{max-width:480px;padding:0 30px}.btn.btn-cta{color:var(--mbdc-cor-primaria);font-weight:bold;padding:1rem 2rem}.form-group{display:block;margin-bottom:1rem}input.form-control,select.form-control,.btn{border-radius:var(--mbdc-border-radius);font-weight:bold}input.form-control::placeholder,select.form-control::placeholder,.btn::placeholder{color:var(--mbdc-cor-leve)}
