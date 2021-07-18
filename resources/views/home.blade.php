@@ -17,7 +17,15 @@
 </head>
 
 <body>
-    <section class="container secao-precadastro">
+    <section class="container secao secao-start">
+        <div class="secao-container">
+        <figure>
+            <img src="" alt="Logo Meu Bandeco">            
+        </figure>
+        </div>
+    </section>
+    <section class="container secao secao-precadastro">
+        <div class="secao-container">
         <div class="conteúdo">
             <header>
                 <h4 class="page-title negative-color">Pré-cadastro</h4>
@@ -98,6 +106,7 @@
 
             </form>
         </div>
+        </div>
     </section>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7YK5QLYTV"></script>
@@ -108,7 +117,7 @@
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-
+v
     gtag('config', 'G-R7YK5QLYTV');
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"

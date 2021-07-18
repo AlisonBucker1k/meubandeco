@@ -12,18 +12,26 @@ Sistema: Meu Bandeco app
 }
 
 html {
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, tahoma, sans-serif;
 }
 
 body {
     color           : white;
     background-color: var(--mbdc-cor-primaria);
 }
- 
-.secao-precadastro {
-    max-width: 480px;
-    padding  : 0 30px; 
+.secao{
+    margin: 0;
+    padding: 0;
+    .secao-container{
+        max-width: 480px;
+        min-height: 100vh;        
+        padding  : 0 30px; 
+    }
+    &.secao-precadastro {
+        max-width: 480px;
+    }
 }
+
 
 .btn {
     @extend %form-field--base;
