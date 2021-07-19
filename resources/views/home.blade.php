@@ -15,12 +15,16 @@
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <title>Meu bandeco - Pré Cadastro</title>
 </head>
-
 <body>
+    <div class="svg-container svg-sprite">
+    {!! file_get_contents('assets/svg/defs/mbdc-sprite-defs.svg') !!}
+    </div>
     <section class="container secao secao-start">
         <div class="secao-container">
         <figure>
-            <img src="" alt="Logo Meu Bandeco">            
+           <svg>
+                <use xlink:href="#mbc-logotipo-primaria"></use>
+           </svg>          
         </figure>
         </div>
     </section>

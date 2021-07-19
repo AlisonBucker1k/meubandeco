@@ -6,60 +6,70 @@ Sistema: Meu Bandeco app
 @import "base";
 
 :root {
-    --mbdc-cor-primaria : #ED1C24;
-    --mbdc-cor-leve     : #E0E0E0;
-    --mbdc-border-radius: 10px;    
+    --mbdc-cor-primaria: #ed1c24;
+    --mbdc-cor-leve: #e0e0e0;
+    --mbdc-border-radius: 10px;
 }
 
 html {
     font-family: Montserrat, tahoma, sans-serif;
 }
-
+ 
 body {
-    color           : white;
-    background-color: var(--mbdc-cor-primaria);
+    //color: white; 
+    background-color: transparent; //var(--mbdc-cor-primaria);
 }
-.secao{
+.svg-container {
+    &.svg-sprite {
+        height: 0;
+    }
+}
+.secao {
     margin: 0;
     padding: 0;
-    .secao-container{
+    .secao-start {
+        background-color: white;
+    }
+    .secao-container {
         max-width: 480px;
-        min-height: 100vh;        
-        padding  : 0 30px; 
+        min-height: 100vh;
+        padding: 0 30px;
     }
     &.secao-precadastro {
-        max-width: 480px;
+        max-width: 480px; 
     }
 }
-
 
 .btn {
     @extend %form-field--base;
 
-    &.btn-default {}
+    &.btn-default {
+    }
 
-    &.btn-lg {}
+    &.btn-lg {
+    }
 
     &.btn-cta {
         /*Botao para chamada de vendas/destaque*/
-        color      : var(--mbdc-cor-primaria);
+        color: var(--mbdc-cor-primaria);
         font-weight: bold;
-        padding    : 1rem 2rem;
+        padding: 1rem 2rem;
     }
 
-    &.btn-negative {}
+    &.btn-negative {
+    }
 }
 
 /*Formulários*/
 .form-group {
     /*Base*/
-    display      : block;
+    display: block;
     margin-bottom: 1rem;
 }
 
 %form-field--base {
     border-radius: var(--mbdc-border-radius);
-    font-weight  : bold;
+    font-weight: bold;
 
     &::placeholder {
         color: var(--mbdc-cor-leve);
