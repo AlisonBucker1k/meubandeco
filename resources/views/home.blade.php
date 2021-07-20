@@ -15,101 +15,109 @@
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <title>Meu bandeco - Pré Cadastro</title>
 </head>
+
 <body>
     <div class="svg-container svg-sprite">
-    {!! file_get_contents('assets/svg/defs/mbdc-sprite-defs.svg') !!}
+        {!! file_get_contents('assets/svg/defs/mbdc-sprite-defs.svg') !!}
     </div>
-    <section class="container secao secao-start">
-        <div class="secao-container">
-        <figure>
-           <svg>
-                <use xlink:href="#mbc-logotipo-primaria"></use>
-           </svg>          
-        </figure>
+    <section class="container secao secao-start  text-center d-flex flex-items-center">
+        <div class="secao-container mx-auto">
+            <figure>
+                <svg>
+                    <use xlink:href="#mbc-logotipo-negativa"></use>
+                </svg>
+            </figure>
+            <p>
+                Simplifique os pedidos do seu delivery com a gente!
+            </p>
+            <div class="btn-group">
+                <a class="btn btn-cta btn-negative" href="#" role="button">Pré-cadastro</a>
+            </div>
         </div>
     </section>
     <section class="container secao secao-precadastro">
         <div class="secao-container">
-        <div class="conteúdo">
-            <header>
-                <h4 class="page-title negative-color">Pré-cadastro</h4>
-        </header>
-            <form action="{{ route('form_submit') }}" method="POST">
-                <div class="form-group" id="nome_cliente">
-                    <input type="text" name="nome_cliente" placeholder="Qual o seu nome?" class="form-control">
-                </div>
+            <div class="conteúdo">
+                <header>
+                    <h4 class="page-title negative-color">Pré-cadastro</h4>
+                </header>
+                <form action="{{ route('form_submit') }}" method="POST">
+                    <div class="form-group" id="nome_cliente">
+                        <input type="text" name="nome_cliente" placeholder="Qual o seu nome?" class="form-control">
+                    </div>
 
-                <div class="form-group" id="tipo_c">
-                    <select name="tipo_cliente" class="form-control">
-                        <option value="">Selecione seu tipo de cadastro</option>
-                        <option value="1">Restaurante</option>
-                        <option value="2">Consumidor</option>
-                    </select>
-                </div>
+                    <div class="form-group" id="tipo_c">
+                        <select name="tipo_cliente" class="form-control">
+                            <option value="">Selecione seu tipo de cadastro</option>
+                            <option value="1">Restaurante</option>
+                            <option value="2">Consumidor</option>
+                        </select>
+                    </div>
 
-                <div class="form-group" id="nome_negocio">
-                    <input type="text" name="nome_negocio" placeholder="Qual o nome do seu negócio?"
-                        class="form-control">
-                </div>
+                    <div class="form-group" id="nome_negocio">
+                        <input type="text" name="nome_negocio" placeholder="Qual o nome do seu negócio?"
+                            class="form-control">
+                    </div>
 
-                <div class="form-group" id="seguimento">
-                    <select name="seguimento" class="form-control">
-                        <option value="">Qual é o segmento do seu negócio?</option>
-                        <option value="Barzinho">Barzinho</option>
-                        <option value="Lanchonete">Lanchonete</option>
-                        <option value="Restaurante">Restaurante</option>
-                        <option value="Sorveteria/Açaiteria">Sorveteria/Açaiteria</option>
-                    </select>
-                </div>
-                <div class="form-group" id="email_cliente">
-                    <input type="text" name="email" placeholder="Qual o seu email?" class="form-control">
-                </div>
+                    <div class="form-group" id="seguimento">
+                        <select name="seguimento" class="form-control">
+                            <option value="">Qual é o segmento do seu negócio?</option>
+                            <option value="Barzinho">Barzinho</option>
+                            <option value="Lanchonete">Lanchonete</option>
+                            <option value="Restaurante">Restaurante</option>
+                            <option value="Sorveteria/Açaiteria">Sorveteria/Açaiteria</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="email_cliente">
+                        <input type="text" name="email" placeholder="Qual o seu email?" class="form-control">
+                    </div>
 
-                <div class="form-group" id="email_cliente_confirm">
-                    <input type="text" name="email_confirmation" placeholder="Confirme seu email" class="form-control">
-                </div>
+                    <div class="form-group" id="email_cliente_confirm">
+                        <input type="text" name="email_confirmation" placeholder="Confirme seu email"
+                            class="form-control">
+                    </div>
 
-                <div class="form-group" id="cidade">
-                    <select name="estado" class="form-control">
-                        <option value="">De onde você é?</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                    </select>
-                </div>
+                    <div class="form-group" id="cidade">
+                        <select name="estado" class="form-control">
+                            <option value="">De onde você é?</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
 
-                <div class="form-group" id="telefone">
-                    <input type="text" name="telefone" placeholder="Qual o seu telefone?" class="form-control">
-                </div>
+                    <div class="form-group" id="telefone">
+                        <input type="text" name="telefone" placeholder="Qual o seu telefone?" class="form-control">
+                    </div>
 
-                <input type="submit" value="enviar" class="btn btn-default--negativo">
+                    <input type="submit" value="enviar" class="btn btn-default--negativo">
 
-            </form>
-        </div>
+                </form>
+            </div>
         </div>
     </section>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -121,7 +129,7 @@
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-v
+    v
     gtag('config', 'G-R7YK5QLYTV');
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"

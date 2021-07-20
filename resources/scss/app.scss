@@ -12,7 +12,7 @@ Sistema: Meu Bandeco app
 }
 
 html {
-    font-family: Montserrat, tahoma, sans-serif;
+    font-family: "Montserrat",  sans-serif;
 }
  
 body {
@@ -22,19 +22,29 @@ body {
 .svg-container {
     &.svg-sprite {
         height: 0;
+        display: none;
     }
 }
 .secao {
     margin: 0;
     padding: 0;
-    .secao-start {
-        background-color: white;
-    }
+    
+    max-width: 480px;
+    min-height: 100vh;
+
     .secao-container {
-        max-width: 480px;
-        min-height: 100vh;
         padding: 0 30px;
     }
+    
+    &.secao-start {
+
+        background-color: var( --mbdc-cor-primaria);
+        color: white;
+        p{
+            font-size: 18px;
+        }
+
+    }    
     &.secao-precadastro {
         max-width: 480px; 
     }
@@ -53,13 +63,13 @@ body {
         /*Botao para chamada de vendas/destaque*/
         color: var(--mbdc-cor-primaria);
         font-weight: bold;
-        padding: 1rem 2rem;
+        padding: 1rem 2rem;        
     }
-
     &.btn-negative {
-    }
+        background-color: white;
+        color: var(--mbdc-cor-primaria);
+    }    
 }
-
 /*Formulários*/
 .form-group {
     /*Base*/
