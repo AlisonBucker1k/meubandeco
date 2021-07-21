@@ -55,9 +55,9 @@
 
                     <div class="form-group" id="tipo_c">
                         <select name="tipo_cliente" class="form-control">
-                            <option value="">Selecione seu tipo de cadastro</option>
-                            <option value="1">Restaurante</option>
-                            <option value="2">Consumidor</option>
+                            <option value="0" default>Selecione seu tipo de cadastro</option>
+                            <option value="1">Quero cadastrar meu cardápio</option>
+                            <option value="2">Quero fazer pedidos de comida</option>
                         </select>
                     </div>
 
@@ -73,14 +73,15 @@
                             <option value="Lanchonete">Lanchonete</option>
                             <option value="Restaurante">Restaurante</option>
                             <option value="Sorveteria/Açaiteria">Sorveteria/Açaiteria</option>
+                            <option value="Padaria">Padaria</option>
                         </select>
                     </div>
                     <div class="form-group" id="email_cliente">
-                        <input type="text" name="email" placeholder="Qual o seu email?" class="form-control">
+                        <input type="email" name="email" placeholder="Qual o seu email?" class="form-control">
                     </div>
 
                     <div class="form-group" id="email_cliente_confirm">
-                        <input type="text" name="email_confirmation" placeholder="Confirme seu email"
+                        <input type="email" name="email_confirmation" placeholder="Confirme seu email"
                             class="form-control">
                     </div>
 
@@ -118,7 +119,7 @@
                     </div>
 
                     <div class="form-group" id="telefone">
-                        <input type="text" name="telefone" placeholder="Qual o seu telefone?" class="form-control">
+                        <input type="phone" name="telefone" placeholder="Qual o seu telefone?" class="form-control">
                     </div>
 
                     <input type="submit" value="enviar" class="btn btn-default--negativo">
