@@ -20,26 +20,33 @@
     <div class="svg-container svg-sprite">
         {!! file_get_contents('assets/svg/defs/mbdc-sprite-defs.svg') !!}
     </div>
-    <section class="container secao secao-start  text-center d-flex flex-items-center">
+    <section id="start" class="container secao secao-start  text-center d-flex flex-items-center">
         <div class="secao-container mx-auto">
             <figure>
-                <svg>
-                    <use xlink:href="#mbc-logotipo-negativa"></use>
+                <svg class="svg-container brand-logotipo" viewBox="0 0 600 600">
+                    <use xlink:href="#mbc-logotipo-negativa" ></use>
                 </svg>
             </figure>
             <p>
                 Simplifique os pedidos do seu delivery com a gente!
             </p>
             <div class="btn-group">
-                <a class="btn btn-cta btn-negative" href="#" role="button">Pré-cadastro</a>
+                <a class="btn btn-cta btn-negative" href="#pre-cadastro" role="button">Pré-cadastro</a>
             </div>
         </div>
     </section>
-    <section class="container secao secao-precadastro">
+    <section id="pre-cadastro" class="container secao secao-precadastro">
         <div class="secao-container">
             <div class="conteúdo">
                 <header>
-                    <h4 class="page-title negative-color">Pré-cadastro</h4>
+                    <a href="#start">
+                    <figure>
+                        <svg class="svg-container brand-simb">
+                            <use xlink:href="#mbc-simb-positivo-primario"></use>
+                        </svg>
+                    </figure>
+                    </a>
+                    <p> Se cadastre e se prepare para novidades para seu negócio.</p>
                 </header>
                 <form action="{{ route('form_submit') }}" method="POST">
                     <div class="form-group" id="nome_cliente">

@@ -12,6 +12,7 @@ Sistema: Meu Bandeco app
 }
 
 html {
+    scroll-behavior: smooth;    
     font-family: "Montserrat",  sans-serif;
 }
  
@@ -20,20 +21,29 @@ body {
     background-color: transparent; //var(--mbdc-cor-primaria);
 }
 .svg-container {
+    &.brand-simb{
+        /* Container para o simbolo da marca*/
+        max-width: 68px;
+        max-height: 43px;
+    }
+    &.brand-logotipo{
+        /* Container para o logotipo da marca*/       
+        max-width: 100%;      
+    }
     &.svg-sprite {
         height: 0;
         display: none;
-    }
+    }    
 }
 .secao {
     margin: 0;
-    padding: 0;
-    
-    max-width: 480px;
+    padding: 0;    
     min-height: 100vh;
-
+    & > *{
+        // flex-shrink: 0;        
+    }
     .secao-container {
-        padding: 0 30px;
+        padding: 30px;
     }
     
     &.secao-start {
@@ -90,5 +100,11 @@ input,
 select {
     &.form-control {
         @extend %form-field--base;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .secao{        
+    max-width: 480px;
     }
 }
