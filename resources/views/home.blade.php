@@ -24,7 +24,7 @@
         <div class="secao-container mx-auto">
             <figure>
                 <svg class="svg-container brand-logotipo" viewBox="0 0 600 600">
-                    <use xlink:href="#mbc-logotipo-negativa" ></use>
+                    <use xlink:href="#mbc-logotipo-negativa"></use>
                 </svg>
             </figure>
             <p>
@@ -40,11 +40,11 @@
             <div class="conteúdo">
                 <header>
                     <a href="#start">
-                    <figure>
-                        <svg class="svg-container brand-simb">
-                            <use xlink:href="#mbc-simb-positivo-primario"></use>
-                        </svg>
-                    </figure>
+                        <figure>
+                            <svg class="svg-container brand-simb">
+                                <use xlink:href="#mbc-simb-positivo-primario"></use>
+                            </svg>
+                        </figure>
                     </a>
                     <p> Se cadastre e se prepare para novidades para seu negócio.</p>
                 </header>
