@@ -23,7 +23,7 @@
     <section id="start" class="container secao secao-start  text-center d-flex flex-items-center">
         <div class="secao-container mx-auto">
             <figure>
-                <svg class="svg-container brand-logotipo" viewBox="0 0 600 600">
+                <svg class="svg-container brand-logotipo" >
                     <use xlink:href="#mbc-logotipo-negativa"></use>
                 </svg>
             </figure>
@@ -31,7 +31,7 @@
                 Simplifique os pedidos do seu delivery com a gente!
             </p>
             <div class="btn-group">
-                <a class="btn btn-cta btn-negative" href="#pre-cadastro" role="button">Pré-cadastro</a>
+                <a class="btn btn-neg btn-cta" href="#pre-cadastro" role="button">Pré-cadastro</a>
             </div>
         </div>
     </section>
@@ -122,7 +122,7 @@
                         <input type="phone" name="telefone" placeholder="Qual o seu telefone?" class="form-control">
                     </div>
 
-                    <input type="submit" value="enviar" class="btn btn-default--negativo">
+                    <input type="submit" value="Enviar" class="btn btn-primary">
 
                 </form>
             </div>

@@ -6,9 +6,16 @@ Sistema: Meu Bandeco app
 @import "base";
 
 :root {
+    /*Cores de branding */
     --mbdc-cor-primaria: #ed1c24;
-    --mbdc-cor-leve: #e0e0e0;
-    --mbdc-border-radius: 10px;
+    --mbdc-cor-leve: #f3f3f3;
+    --mbdc-border-radius: 7px;
+
+    /* Espaços/distancias padrão */
+    --mbdc-s-xs: 0.5rem;
+    --mbdc-s-sm: 0.7rem;
+    --mbdc-s-md: 1.2rem;
+    --mbdc-s-ed: 1.9rem;
 }
 
 html {
@@ -28,7 +35,7 @@ body {
     }
     &.brand-logotipo{
         /* Container para o logotipo da marca*/       
-        max-width: 100%;      
+        max-width: 90%;      
     }
     &.svg-sprite {
         height: 0;
@@ -50,6 +57,11 @@ body {
 
         background-color: var( --mbdc-cor-primaria);
         color: white;
+        align-items: center;
+
+        .secao-container{
+
+        }
         p{
             font-size: 18px;
         }
@@ -61,23 +73,33 @@ body {
 }
 
 .btn {
+
     @extend %form-field--base;
+    @extend %form-button-base;
 
-    &.btn-default {
+    &.btn-primary {
+        background-color: var( --mbdc-cor-primaria );
+        color: white;
+        &:hover, &:active{
+            background-color: #D4040C; 
+        }
+
     }
-
     &.btn-lg {
     }
 
     &.btn-cta {
         /*Botao para chamada de vendas/destaque*/
-        color: var(--mbdc-cor-primaria);
+        color: var(--mbdc-cor-primaria) ;
         font-weight: bold;
-        padding: 1rem 2rem;        
+        padding:  var( --mbdc-s-sm ) var( --mbdc-s-md ); 
+        &:hover, &:active{
+            background-color: var( --mbdc-cor-leve ); 
+        }
+
     }
-    &.btn-negative {
+    &.btn-neg {
         background-color: white;
-        color: var(--mbdc-cor-primaria);
     }    
 }
 /*Formulários*/
@@ -95,6 +117,13 @@ body {
         color: var(--mbdc-cor-leve);
     }
 }
+%form-button-base{
+    padding:  var( --mbdc-s-xs ) var( --mbdc-s-md ); ;
+    border: 1px transparent;
+    font-weight: normal;
+    transition: background color .3s ease;
+}
+
 
 input,
 select {
