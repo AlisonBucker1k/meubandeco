@@ -46,6 +46,7 @@ body {
     margin: 0;
     padding: 0;    
     min-height: 100vh;
+    display: flex ;
     & > *{
         // flex-shrink: 0;        
     }
@@ -68,7 +69,6 @@ body {
 
     }    
     &.secao-precadastro {
-        max-width: 480px; 
     }
 }
 
@@ -132,8 +132,9 @@ select {
     }
 }
 
-@media screen and (max-width: 480px){
-    .secao{        
+@media screen and (min-width: 480px){
+    .secao-container{        
     max-width: 480px;
+    margin: 0 auto;
     }
 }

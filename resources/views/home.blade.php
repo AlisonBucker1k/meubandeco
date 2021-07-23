@@ -20,7 +20,7 @@
     <div class="svg-container svg-sprite">
         {!! file_get_contents('assets/svg/defs/mbdc-sprite-defs.svg') !!}
     </div>
-    <section id="start" class="container secao secao-start  text-center d-flex flex-items-center">
+    <section id="start" class="container-fluid secao secao-start  text-center flex-items-center">
         <div class="secao-container mx-auto">
             <figure>
                 <svg class="svg-container brand-logotipo" >
@@ -35,7 +35,7 @@
             </div>
         </div>
     </section>
-    <section id="pre-cadastro" class="container secao secao-precadastro">
+    <section id="pre-cadastro" class="container-fluid secao secao-precadastro">
         <div class="secao-container">
             <div class="conteúdo">
                 <header>
