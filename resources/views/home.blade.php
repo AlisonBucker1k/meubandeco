@@ -48,6 +48,13 @@
                     </a>
                     <p> Se cadastre e se prepare para novidades para seu negócio.</p>
                 </header>
+
+                @if($errors->any())
+                    @foreach($errors->all() as $error)
+                        {{ $error }}<br />
+                    @endforeach;
+                @endif
+
                 <form action="{{ route('form_submit') }}" method="POST">                    
                     @csrf
                     <div class="form-group" id="nome_cliente">
@@ -86,7 +93,7 @@
                             class="form-control">
                     </div>
 
-                    <div class="form-group" id="cidade">
+                    {{-- <div class="form-group" id="cidade">
                         <select name="estado" class="form-control">
                             <option value="">De onde você é?</option>
                             <option value="AC">Acre</option>
@@ -117,11 +124,13 @@
                             <option value="SE">Sergipe</option>
                             <option value="TO">Tocantins</option>
                         </select>
-                    </div>
+                    </div> --}}
 
                     <div class="form-group" id="telefone">
                         <input type="phone" name="telefone" placeholder="Qual o seu telefone?" class="form-control">
                     </div>
+
+                    <input type="hidden" name="id_indicador" value="<?php echo ($id != null) ?$id:'';?>" />
 
                     <input type="submit" value="Enviar" class="btn btn-primary">
 
