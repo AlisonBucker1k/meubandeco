@@ -23,7 +23,7 @@
     <section id="start" class="container-fluid secao secao-start  text-center flex-items-center">
         <div class="secao-container mx-auto">
             <figure>
-                <svg class="svg-container brand-logotipo" >
+                <svg class="svg-container brand-logotipo">
                     <use xlink:href="#mbc-logotipo-negativa"></use>
                 </svg>
             </figure>
@@ -49,34 +49,35 @@
                     <p> Se cadastre e se prepare para novidades para seu negócio.</p>
                 </header>
 
-                @if($errors->any())
-                    @foreach($errors->all() as $error)
-                        {{ $error }}<br />
-                    @endforeach;
-                @endif
 
-                <form action="{{ route('form_submit') }}" method="POST">                    
+                <form action="{{ route('form_submit') }}" method="POST" class="needs-validation" novalidate>
                     @csrf
                     <div class="form-group" id="nome_cliente">
-                        <input type="text" name="nome_cliente" placeholder="Qual o seu nome?" class="form-control">
+                        <label for="nome" class="form-label">Qual o seu nome?</label>
+                        <input id="nome" type="text" name="nome_cliente" class="form-control" required>
+                        <div class="valid-feedback">
+                            Vou te chamar sempre assim ;)
+                        </div>
                     </div>
 
                     <div class="form-group" id="tipo_c">
-                        <select name="tipo_cliente" class="form-control">
-                            <option value="0" selected="selected">Selecione seu tipo de cadastro</option>
-                            <option value="1">Quero cadastrar meu cardápio</option>
+                        <label for="tipo_cliente" class="form-label">Selecione seu tipo de cadastro</label>
+                        <select id="tipo_cliente" name="tipo_cliente" class="form-control" required>
+                            <option value="1" selected="selected">Quero cadastrar meu cardápio</option>
                             <option value="2">Quero fazer pedidos de comida</option>
                         </select>
+                        <div class="valid-feedback">Ótima escolha</div>
                     </div>
 
-                    <div class="form-group" id="nome_negocio">
-                        <input type="text" name="nome_negocio" placeholder="Qual o nome do seu negócio?"
-                            class="form-control">
+                    <div class="form-group" id="nome_negocio" required>
+                        <label for="negocio_nome" class="form-label">Qual o nome do seu negócio?</label>
+                        <input id="negocio_nome" type="text" name="nome_negocio" class="form-control">
+                        <div class="valid-feedback">O nome do seu negócio é o chave agora!</div>
                     </div>
 
                     <div class="form-group" id="segmento">
-                        <select name="segmento" class="form-control">
-                            <option value="">Qual é o segmento do seu negócio?</option>
+                        <label for="segmento_neg" class="form-label">Qual é o segmento do seu negócio?</label>
+                        <select id="segmento_neg" name="segmento" class="form-control">
                             <option value="Barzinho">Barzinho</option>
                             <option value="Lanchonete">Lanchonete</option>
                             <option value="Restaurante">Restaurante</option>
@@ -85,12 +86,14 @@
                         </select>
                     </div>
                     <div class="form-group" id="email_cliente">
-                        <input type="email" name="email" placeholder="Qual o seu email?" class="form-control">
+                        <label for="email" class="form-label">Qual o seu email?</label>
+                        <input id="email" type="email" name="email" class="form-control" required>
+                        <div class="valid-feedback">Não se preocupe. Só usaremos estritamente para contato e envio de promoções que poderá cancelar a qualquer momento no seu email.</div>
                     </div>
 
                     <div class="form-group" id="email_cliente_confirm">
-                        <input type="email" name="email_confirmation" placeholder="Confirme seu email"
-                            class="form-control">
+                        <label for="email_confirmation" class="form-label">Confirme seu email</label>
+                        <input id="email_confirmation" type="email" name="email_confirmation" class="form-control" required>
                     </div>
 
                     {{-- <div class="form-group" id="cidade">
@@ -127,13 +130,20 @@
                     </div> --}}
 
                     <div class="form-group" id="telefone">
-                        <input type="phone" name="telefone" placeholder="Qual o seu telefone?" class="form-control">
+                        <label for="phone" class="for-label">Qual o seu telefone?</label>
+                        <input id="phone" type="phone" name="telefone" class="form-control" required>
+                        <div class="valid-feedback">NUNCA vamos te ligar para pedir dados.</div>
                     </div>
 
                     <input type="hidden" name="id_indicador" value="<?php echo ($id != null) ?$id:'';?>" />
 
                     <input type="submit" value="Enviar" class="btn btn-primary">
 
+                    @if($errors->any())
+                    @foreach($errors->all() as $error)
+                    {{ $error }}<br />
+                    @endforeach;
+                    @endif
                 </form>
             </div>
         </div>
@@ -146,8 +156,7 @@
     function gtag() {
         dataLayer.push(arguments);
     }
-    gtag('js', new Date());
-    v
+    gtag('js', new Date());    
     gtag('config', 'G-R7YK5QLYTV');
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
