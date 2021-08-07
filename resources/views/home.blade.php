@@ -88,12 +88,12 @@
                     <div class="form-group" id="email_cliente">
                         <label for="email" class="form-label">Qual o seu email?</label>
                         <input id="email" type="email" name="email" class="form-control" required>
-                        <div class="valid-feedback">Não se preocupe. Só usaremos estritamente para contato e envio de promoções que poderá cancelar a qualquer momento no seu email.</div>
+                        <div class="valid-feedback">Não se preocupe. Só usaremos estritamente para contato e envio de promoções e que poderá cancelar a qualquer momento no seu email.</div>
                     </div>
 
                     <div class="form-group" id="email_cliente_confirm">
                         <label for="email_confirmation" class="form-label">Confirme seu email</label>
-                        <input id="email_confirmation" type="email" name="email_confirmation" class="form-control" required>
+                        <input id="email_confirmation" type="email" name="email_confirmation" class="form-control" required autocomplete="off">
                     </div>
 
                     {{-- <div class="form-group" id="cidade">
