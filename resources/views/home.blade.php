@@ -48,14 +48,15 @@
                     </a>
                     <p> Se cadastre e se prepare para novidades para seu negócio.</p>
                 </header>
-                <form action="{{ route('form_submit') }}" method="POST">
+                <form action="{{ route('form_submit') }}" method="POST">                    
+                    @csrf
                     <div class="form-group" id="nome_cliente">
                         <input type="text" name="nome_cliente" placeholder="Qual o seu nome?" class="form-control">
                     </div>
 
                     <div class="form-group" id="tipo_c">
                         <select name="tipo_cliente" class="form-control">
-                            <option value="0" default>Selecione seu tipo de cadastro</option>
+                            <option value="0" selected="selected">Selecione seu tipo de cadastro</option>
                             <option value="1">Quero cadastrar meu cardápio</option>
                             <option value="2">Quero fazer pedidos de comida</option>
                         </select>
@@ -66,8 +67,8 @@
                             class="form-control">
                     </div>
 
-                    <div class="form-group" id="seguimento">
-                        <select name="seguimento" class="form-control">
+                    <div class="form-group" id="segmento">
+                        <select name="segmento" class="form-control">
                             <option value="">Qual é o segmento do seu negócio?</option>
                             <option value="Barzinho">Barzinho</option>
                             <option value="Lanchonete">Lanchonete</option>
