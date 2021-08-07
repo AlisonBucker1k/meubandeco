@@ -63,7 +63,8 @@
                     <div class="form-group" id="tipo_c">
                         <label for="tipo_cliente" class="form-label">Selecione seu tipo de cadastro</label>
                         <select id="tipo_cliente" name="tipo_cliente" class="form-control" required>
-                            <option value="1" selected="selected">Quero cadastrar meu cardápio</option>
+                            <option value="0" selected="selected"></option>
+                            <option value="1">Quero cadastrar meu cardápio</option>
                             <option value="2">Quero fazer pedidos de comida</option>
                         </select>
                         <div class="valid-feedback">Ótima escolha</div>
@@ -88,12 +89,14 @@
                     <div class="form-group" id="email_cliente">
                         <label for="email" class="form-label">Qual o seu email?</label>
                         <input id="email" type="email" name="email" class="form-control" required>
-                        <div class="valid-feedback">Não se preocupe. Só usaremos estritamente para contato e envio de promoções e que poderá cancelar a qualquer momento no seu email.</div>
+                        <div class="valid-feedback">Não se preocupe. Só usaremos estritamente para contato e envio de
+                            promoções e que poderá cancelar a qualquer momento no seu email.</div>
                     </div>
 
                     <div class="form-group" id="email_cliente_confirm">
                         <label for="email_confirmation" class="form-label">Confirme seu email</label>
-                        <input id="email_confirmation" type="email" name="email_confirmation" class="form-control" required autocomplete="off">
+                        <input id="email_confirmation" type="email" name="email_confirmation" class="form-control"
+                            required autocomplete="off">
                     </div>
 
                     {{-- <div class="form-group" id="cidade">
@@ -156,7 +159,7 @@
     function gtag() {
         dataLayer.push(arguments);
     }
-    gtag('js', new Date());    
+    gtag('js', new Date());
     gtag('config', 'G-R7YK5QLYTV');
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -166,6 +169,38 @@
         integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script>
+    (function() {
+        'use strict';
+        init();
+
+        function init() {
+            
+            $("#segmento").hide();
+            $("#nome_negocio").hide();
+            
+            $("#tipo_cliente").change(function(){
+                var tipo_c = $(this).val();
+                if(tipo_c == 1){
+                    set_modo_empresa();
+                };
+                if(tipo_c == 2){                    
+                    set_modo_usuario();
+                }
+            });
+        };
+
+        function set_modo_usuario() {            
+            $("#segmento").hide();
+            $("#nome_negocio").hide();
+        };
+
+        function set_modo_empresa() {            
+            $("#segmento").show();
+            $("#nome_negocio").show();
+        };
+    })()
+    </script>
 </body>
 
 </html>
