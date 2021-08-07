@@ -9,6 +9,7 @@ Sistema: Meu Bandeco app
     /*Cores de branding */
     --mbdc-cor-primaria: #ed1c24;
     --mbdc-cor-leve: #f3f3f3;
+    --mbdc-cor-cinza: #BDBDBD;
     --mbdc-border-radius: 7px;
 
     /* Espaços/distancias padrão */
@@ -114,8 +115,13 @@ body {
     font-weight: bold;
 
     &::placeholder {
-        color: var(--mbdc-cor-leve);
+        color: var(--mbdc-cor-cinza);
+    } 
+    &:invalid{
+        color: var(--mbdc-cor-primaria );
+        border-color: var( --mbdc-cor-primaria );
     }
+
 }
 %form-button-base{
     padding:  var( --mbdc-s-xs ) var( --mbdc-s-md ); ;
