@@ -23,7 +23,7 @@ class HomeController extends Controller
             $request->validate([
                 'nome_cliente' => [ 'required', 'string' ],
                 'tipo_cliente' => [ 'required', 'integer' ],
-                'nome_negocio' => [ 'string' ],
+                'nome_negocio' => [ 'required' ],
                 'segmento' => [ 'string' ],
                 'email' => [ 'required', 'email' ],
                 'email_confirmation' =>[ 'string', 'required', 'email' ],
