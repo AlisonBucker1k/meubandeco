@@ -12,4 +12,4 @@ return [
         'Padaria' => 5,
         'Outros' => 9
         ]
-    ]
+    ]; 
