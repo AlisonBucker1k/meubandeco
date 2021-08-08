@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,13 +71,13 @@
 
                     <div class="form-group" id="nome_negocio" required>
                         <label for="negocio_nome" class="form-label">Qual o nome do seu negócio?</label>
-                        <input id="negocio_nome" type="text" name="nome_negocio" class="form-control">
+                        <input id="negocio_nome" type="text" name="nome_negocio" class="form-control" required>
                         <div class="valid-feedback">O nome do seu negócio é o chave agora!</div>
                     </div>
 
                     <div class="form-group" id="segmento">
                         <label for="segmento_neg" class="form-label">Qual é o segmento do seu negócio?</label>
-                        <select id="segmento_neg" name="segmento" class="form-control">
+                        <select id="segmento_neg" name="segmento" class="form-control" required>
                             <option value="Barzinho">Barzinho</option>
                             <option value="Lanchonete">Lanchonete</option>
                             <option value="Restaurante">Restaurante</option>
@@ -178,7 +177,7 @@
             
             $("#segmento").hide();
             $("#nome_negocio").hide();
-            
+
             $("#tipo_cliente").change(function(){
                 var tipo_c = $(this).val();
                 if(tipo_c == 1){

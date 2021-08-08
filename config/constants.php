@@ -1,3 +1,4 @@
+<?php 
 return [
     'tipos_cliente' => [
         'Empresa' => 1,
