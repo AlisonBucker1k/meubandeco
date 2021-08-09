@@ -78,11 +78,12 @@
                     <div class="form-group" id="segmento">
                         <label for="segmento_neg" class="form-label">Qual é o segmento do seu negócio?</label>
                         <select id="segmento_neg" name="segmento" class="form-control" required>
-                            <option value="Barzinho">Barzinho</option>
-                            <option value="Lanchonete">Lanchonete</option>
-                            <option value="Restaurante">Restaurante</option>
-                            <option value="Sorveteria/Açaiteria">Sorveteria/Açaiteria</option>
-                            <option value="Padaria">Padaria</option>
+                            <option value="1">Barzinho</option>
+                            <option value="2">Lanchonete</option>
+                            <option value="3">Restaurante</option>
+                            <option value="4">Sorveteria/Açaiteria</option>
+                            <option value="5">Padaria</option>
+                            <option value="9">Outros</options>
                         </select>
                     </div>
                     <div class="form-group" id="email_cliente">

@@ -22,7 +22,7 @@ class CreateTables extends Migration
             $table->integer('segmento')->default(0);
             $table->integer('tipo_cliente');
             $table->string('email', 255);
-            $table->string('estado', 150)->default('');
+            $table->string('estado', 2)->default('');
             $table->string('telefone', 55)->default('');
             $table->timestamps();
         });
