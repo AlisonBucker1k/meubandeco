@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -176,29 +177,41 @@
         init();
 
         function init() {
-            
-            $("#segmento").hide();
-            $("#nome_negocio").hide();
 
-            $("#tipo_cliente").change(function(){
+            set_modo_usuario();
+
+            $("#tipo_cliente").change(function() {
                 var tipo_c = $(this).val();
-                if(tipo_c == 1){
+                if (tipo_c == 1) {
                     set_modo_empresa();
                 };
-                if(tipo_c == 2){                    
+                if (tipo_c == 2) {
                     set_modo_usuario();
                 }
             });
         };
 
-        function set_modo_usuario() {            
-            $("#segmento").hide();
-            $("#nome_negocio").hide();
+        function set_modo_usuario() {
+            $("#segmento").hide(function() {
+                var t = $(this);
+                $(".form-control", t).removeAttr("required");
+            })
+            $("#nome_negocio").hide(function() {
+                    var t = $(this);
+                    $(".form-control", t).removeAttr("required");
+                }
+            );
         };
 
-        function set_modo_empresa() {            
-            $("#segmento").show();
-            $("#nome_negocio").show();
+        function set_modo_empresa() {
+            $("#segmento").show(function(){
+                var t = $(this);
+               $(".form-control", t).attr("required","required");
+            });
+            $("#nome_negocio").show(function(){
+                var t = $(this);
+               $(".form-control", t).attr("required","required");
+            })
         };
     })()
     </script>
