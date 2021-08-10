@@ -25,6 +25,9 @@ class CreateTables extends Migration
             $table->string('estado', 2)->default('');
             $table->string('telefone', 55)->default('');
             $table->timestamps();
+            
+            //Adição de campós unicos
+            $table->unique(['nome_cliente','email']);
         });
 
         Schema::create('metas', function (Blueprint $table) {
