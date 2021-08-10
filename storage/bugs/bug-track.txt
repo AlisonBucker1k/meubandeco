@@ -1,0 +1,13 @@
+####################
+# Arquivo de track de bugs (anotações)
+# 
+# Uso: Os bugs deverão ser documentados a partir de 
+cada id do commit exadecimal do Git (git log --oneline), seguido da data e explicação do bug; Sendo listados a seguir:
+# Ex: 
+# bd3a0ca - 09/08/2021: 
+#    1 - PRoblemas na lógica do formulário.
+#    
+######################################################
+bd3a0ca - 09/08/2021:
+    001 - Connection could not be established with host mailhog :stream_socket_client(): php_network_getaddresses: getaddrinfo failed: Este host n�o � conhecido. 
+    002 - Erro de dados duplicados para dados já inseridos: (SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Andreson Tianth-andresontianth@gmail.com' for key 'cadastros_nome_cliente_email_unique' (SQL: insert into `cadastros` (`id_indicador`, `indicados`, `nome_cliente`, `nome_negocio`, `segmento`, `tipo_cliente`, `email`, `telefone`, `updated_at`, `created_at`) values (0, 0, Andreson Tianth, Meu Cantinho, 4, 1, andresontianth@gmail.com, (27) 99879-5013, 2021-08-10 01:23:39, 2021-08-10 01:23:39)));
