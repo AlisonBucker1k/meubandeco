@@ -27,11 +27,14 @@ class CreateTables extends Migration
             $table->timestamps();
             
             //Adição de campós unicos
-            $table->unique(['nome_cliente','email']);
+            $table->unique(['nome_cliente','email'] ,'uk_cadastro_cliente');
         });
 
         Schema::create('metas', function (Blueprint $table) {
             $table->increments('id');
+            $table->foreingId('cadastro_id')
+                  ->constrained('cadastros')
+                  ->onDelete('cascade');
             $table->integer('qt_indicados')->default(0);
             $table->string('tipo_bonus', 150);
             $table->integer('valor_bonus')->default(0);

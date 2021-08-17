@@ -64,7 +64,7 @@
                     <div class="form-group" id="tipo_c">
                         <label for="tipo_cliente" class="form-label">Selecione seu tipo de cadastro</label>
                         <select id="tipo_cliente" name="tipo_cliente" class="form-control" required>
-                            <option value="0" selected="selected"></option>
+                            <option value="" selected="selected"></option>
                             <option value="1">Quero cadastrar meu cardápio</option>
                             <option value="2">Quero fazer pedidos de comida</option>
                         </select>
